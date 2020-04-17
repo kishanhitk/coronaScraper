@@ -8,6 +8,7 @@ async function main() {
     "https://www.worldometers.info/coronavirus/"
   );
   const $ = cheerio.load(result);
+
   const scrapedData = [];
   const tableHeaders = [
     "Country,Other",
@@ -24,17 +25,21 @@ async function main() {
     "Tests/1M Population",
     "Continent",
   ];
+  //Go to each tr and push each td of each tr into scrapedData.
   $("tbody > tr").each((index, element) => {
     const tds = $(element).find("td");
     const tableRow = {};
     $(tds).each((i, element) => {
+      //Added replace to remove unwanted character from text.
       tableRow[tableHeaders[i]] = $(element).text().trim().replace("\n", "");
     });
     scrapedData.push(tableRow);
   });
-  console.log(scrapedData);
+  //   console.log(scrapedData);
   const j2cp = new json2csv();
+  //Convert JSON data in CSV.
   const csv = j2cp.parse(scrapedData);
+  //Write converted CSV data into data.csv file.
   fs.writeFileSync("./data.csv", csv);
 }
 
