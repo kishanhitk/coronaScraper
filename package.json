@@ -1,0 +1,19 @@
+{
+  "name": "coronascraper",
+  "version": "1.0.0",
+  "description": "A webscraper build with NodeJS and Cheerio to fetch the latest statistics of COVID-19 cases across the globe. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishanhitk/coronaScraper.git"
+  },
+  "author": "Kishan Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kishanhitk/coronaScraper/issues"
+  },
+  "homepage": "https://github.com/kishanhitk/coronaScraper#readme"
+}
