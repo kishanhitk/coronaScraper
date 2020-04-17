@@ -1,7 +1,7 @@
 # coronaScraper
 
 coronaScraper is a web scraper that scraps the latest data from the Worldometer website about COVID-19 cases across the globe and writes it in a neatly organized CSV file.
-
+#### Built using NodeJS and Cheerio
 ## Use
 
 In the project repository, run:
